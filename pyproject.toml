@@ -7,7 +7,9 @@ authors = [
     { name = "Nilanjan Das", email = "nilanjan.das@global.ntt" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "openai>=3.13.0",
+]
 
 [project.scripts]
 ai-engineer-learning = "ai_engineer_learning:main"
