@@ -83,6 +83,16 @@ In practice you rarely push straight to `master`. Instead you work on a feature 
 
 **Pulling a specific branch (not your current one):** `git pull origin <branch-name>` — fetches and merges just that branch, useful if you want to grab someone else's branch without switching to it first.
 
+**Pushing to a remote branch with a different name (no matching local branch needed):**
+
+Sometimes you want to keep only `master` locally, but push it to a *differently named* branch on GitHub (e.g. `dev-branch`) — useful if your remote workflow uses branch names that don't need to exist locally.
+
+```
+git push -u origin master:dev-branch
+```
+
+**How to read this:** `local-branch:remote-branch` — "take my local `master` and push it to a branch on `origin` called `dev-branch`," creating it on GitHub if it doesn't exist. The `-u` sets up tracking, so afterward plain `git push` / `git pull` from `master` automatically talk to `origin/dev-branch`.
+
 ---
 
 ## Module 5 — Undoing Things (safely)
@@ -118,6 +128,7 @@ git switch -c <branch>       # create + move to a branch in one step
 git merge <branch>            # merge a branch into your current one
 git restore <file>            # discard uncommitted changes
 git push                     # upload commits to GitHub
+git push origin master:dev-branch   # push local master to a differently-named remote branch
 git pull                     # download commits from GitHub
 ```
 
