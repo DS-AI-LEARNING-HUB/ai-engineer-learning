@@ -15,7 +15,7 @@ Check items off as you go (`[x]`). Revisit this file weekly — reorder or skip 
 - [x] Confirm access to your org's Databricks workspace — connected via VS Code Databricks extension, catalogs visible
 - [x] Set up Git + GitHub (bonus, not originally listed): repo created at `DS-AI-LEARNING-HUB/ai-engineer-learning`, local `master` tracks `origin/dev-branch` — see [GIT_LEARNING.md](GIT_LEARNING.md)
 - [x] Get API access to a hosted LLM: using **Databricks Foundation Model APIs** — `databricks-claude-opus-5` endpoint, tested end-to-end from VS Code via `src/test_databricks_llm.py`
-- [ ] Install [Ollama](https://ollama.com) locally — run small open models (Llama 3.2, Qwen2.5, Phi-4) with zero cloud dependency
+- [ ] ~~Install [Ollama](https://ollama.com) locally~~ — skipped for now, already have a working hosted model via Databricks Foundation Model APIs; revisit later if local/offline model experimentation becomes useful
 - [ ] Skim: Anthropic's [Claude docs](https://docs.claude.com) and Databricks' [Generative AI docs](https://docs.databricks.com/en/generative-ai/index.html) — bookmark, don't deep-read yet
 
 ---
