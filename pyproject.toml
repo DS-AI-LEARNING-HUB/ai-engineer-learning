@@ -1,0 +1,17 @@
+[project]
+name = "ai-engineer-learning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Nilanjan Das", email = "nilanjan.das@global.ntt" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+ai-engineer-learning = "ai_engineer_learning:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
