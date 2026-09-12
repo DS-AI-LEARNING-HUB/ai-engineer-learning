@@ -10,13 +10,12 @@ Check items off as you go (`[x]`). Revisit this file weekly — reorder or skip 
 
 ## Phase 0 — Environment Setup (Week 0, ~5-6 hrs)
 
-- [ ] Install/verify Python 3.11+, `uv` or `venv` for environment management
-- [ ] VS Code extensions: Python, Pylance, Jupyter, **Databricks** (official extension — enables Databricks Connect, notebook sync, job run from VS Code)
-- [ ] Create a [Databricks Free Edition](https://www.databricks.com/product/faq/community-edition) account if you don't already have workspace access, or confirm access to your org's workspace
-- [ ] Set up Databricks Connect from VS Code (run a cluster command from local VS Code against a Databricks cluster)
-- [ ] Get API access to at least one hosted LLM: Anthropic Claude API or Databricks Foundation Model APIs (pay-per-token, no separate cloud infra needed)
+- [x] Install/verify Python 3.11+, `uv` or `venv` for environment management — Python 3.12.10 + `uv` confirmed
+- [x] VS Code extensions: Python, Pylance, Jupyter, **Databricks** (official extension — enables Databricks Connect, notebook sync, job run from VS Code)
+- [x] Confirm access to your org's Databricks workspace — connected via VS Code Databricks extension, catalogs visible
+- [x] Set up Git + GitHub (bonus, not originally listed): repo created at `DS-AI-LEARNING-HUB/ai-engineer-learning`, local `master` tracks `origin/dev-branch` — see [GIT_LEARNING.md](GIT_LEARNING.md)
+- [x] Get API access to a hosted LLM: using **Databricks Foundation Model APIs** — `databricks-claude-opus-5` endpoint, tested end-to-end from VS Code via `src/test_databricks_llm.py`
 - [ ] Install [Ollama](https://ollama.com) locally — run small open models (Llama 3.2, Qwen2.5, Phi-4) with zero cloud dependency
-- [ ] Create a GitHub repo (e.g. `genai-learning`) to commit every project below — this becomes your portfolio
 - [ ] Skim: Anthropic's [Claude docs](https://docs.claude.com) and Databricks' [Generative AI docs](https://docs.databricks.com/en/generative-ai/index.html) — bookmark, don't deep-read yet
 
 ---
