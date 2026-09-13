@@ -13,3 +13,8 @@ wheels/
 .env
 .env.*
 .databricks
+
+# Regenerable RAG artifacts (rebuild via src/RAG/build_index.py)
+data/chroma_db/
+data/extracted_images/
+data/index.json

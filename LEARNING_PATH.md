@@ -39,16 +39,17 @@ Check items off as you go (`[x]`). Revisit this file weekly — reorder or skip 
 ## Phase 2 — Retrieval-Augmented Generation (RAG) (Weeks 4-6, ~18-24 hrs)
 
 **Topics**
-- [ ] Chunking strategies (fixed-size, semantic, recursive) and why chunk size matters
-- [ ] Vector stores: FAISS/Chroma (local, no cloud) vs Databricks Vector Search (managed)
-- [ ] Retrieval pipeline: embed → store → retrieve → rerank → generate
-- [ ] Framework: pick **one** of LangChain or LlamaIndex (don't learn both) — LlamaIndex is more RAG-focused and lighter-weight
+- [x] Chunking strategies: naive fixed-size (and its failure modes) → header/structure-aware → recursive paragraph fallback with atomic-unit protection (never split an image link) — `src/RAG/chunking.py`
+- [x] Multimodal document parsing: extracting text + embedded images from a real PDF in reading order (`pdf_extract_ordered` logic), captioning images via Claude's vision input, merging captions back into the text flow — `src/RAG/pdf_to_text.py`
+- [x] Vector stores: built locally with **Chroma** (open-source, no cloud/account needed) — `src/RAG/build_index.py`. Databricks Vector Search version still to do.
+- [x] Retrieval pipeline: embed → store → retrieve → generate, fully working end-to-end — `src/RAG/query.py`
+- [ ] ~~Framework: LangChain/LlamaIndex~~ — deliberately built the pipeline from scratch first for understanding; may revisit a framework later
 - [ ] Databricks-specific: Unity Catalog Volumes for document storage, Databricks Vector Search index creation
 
 **Hands-on**
-- [ ] Build a RAG pipeline locally first (Chroma + Ollama or Claude) over a small personal doc set (PDFs, notes)
+- [x] Built a RAG pipeline locally: Chroma + `databricks-claude-opus-5` + `system.ai.gte-large-en`, over a synthetic doc set (3 markdown docs + 1 PDF with a real embedded chart)
+- [x] **Project 2 (local version):** a working RAG system that correctly answers questions using data that only existed inside a chart image (proving the multimodal captioning step actually works) — `src/RAG/query.py`
 - [ ] Rebuild the same pipeline on Databricks: load docs into a Volume, create a Vector Search index, query it from a notebook
-- [ ] **Project 2:** A RAG chatbot over a real corpus you care about (e.g., internal docs, a subject you're studying) — one version running locally, one running on Databricks
 
 ---
 
