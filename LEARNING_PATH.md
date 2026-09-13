@@ -23,16 +23,16 @@ Check items off as you go (`[x]`). Revisit this file weekly — reorder or skip 
 ## Phase 1 — LLM Foundations & Prompt Engineering (Weeks 1-3, ~18-24 hrs)
 
 **Topics**
-- [ ] Transformer architecture refresher (attention, context window, tokenization) — you know ML, so 1-2 hrs is enough
-- [ ] Embeddings: what they are, cosine similarity, when text is "close" in vector space
-- [ ] Prompt engineering: zero/few-shot, chain-of-thought, structured/JSON output, system prompts
-- [ ] LLM API mechanics: streaming, tool/function calling, token limits, cost/latency tradeoffs
-- [ ] Anthropic's [prompt engineering guide](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview) — read fully, it's the best free resource for this
+- [x] Transformer/LLM mental model: next-token prediction, tokens vs. words (`tiktoken` hands-on), context window, "lost in the middle"
+- [x] Embeddings: what they are, cosine similarity, hands-on with `system.ai.gte-large-en` comparing sentence similarity
+- [x] Prompt engineering: zero/few-shot, chain-of-thought, structured/JSON output, system prompts — `prompt_playground.py`
+- [x] LLM API mechanics: streaming (`streaming_playground.py`), tool/function calling (`tool_calling_playground.py`), token limits/cost/latency (`token_limit_playground.py`, incl. reasoning-model thinking budgets), response object anatomy (`inspect_response.py`)
+- [ ] ~~Anthropic's prompt engineering guide~~ — optional background reading, not required to proceed
 
 **Hands-on (in VS Code)**
-- [ ] Build a small Python CLI that calls Claude API + a local Ollama model side by side, compare outputs
-- [ ] Implement structured output extraction (e.g., parse messy text into JSON using tool-use/function-calling)
-- [ ] **Project 1:** A command-line "prompt playground" script — swap models/prompts via config, log results to a file
+- [x] Structured output extraction via tool/function calling
+- [x] **Project 1:** prompt/tool/streaming/embedding playground scripts in `src/`, all calling Databricks Foundation Model APIs (`databricks-claude-opus-5`, `system.ai.gte-large-en`)
+- [ ] ~~CLI comparing Claude API + local Ollama~~ — skipped, no local Ollama; used Databricks-hosted models throughout instead
 
 ---
 
